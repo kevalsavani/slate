@@ -50,10 +50,10 @@ This endpoint lets you login into the portal.
 
 ### Parameters
 
-Parameter | Type | Default | Description
---------- | ------- | ------- | -----------
-email | string | - | Email address
-password | string | - | Your secret password
+Parameter | Type | Default | Required | Description
+--------- | ------- | ------- | ------- | -----------
+email | string | -  | Yes | Email address
+password | string | -  | Yes | Your secret password
 <!-- Sample Section Ends -->
 
 # Video Studio
@@ -93,10 +93,10 @@ Retrieve all the video list of candidate.
 
 ### Parameters
 
-Parameter | Type | Default | Description
---------- | ------- | ------- | -----------
-page | integer | 1 | The page number to retrieve list
-pageSize | integer | 20 | How many records per page
+Parameter | Type | Default | Required | Description
+--------- | ------- | ------- | ------- | -----------
+page | integer | 1 | No | The page number to retrieve list
+pageSize | integer | 20 | No | How many records per page
 
 ## Add/Create a new Video
 
@@ -117,8 +117,32 @@ This endpoint lets you add new video into video studio list.
 
 ### Parameters
 
-Parameter | Type | Default | Description
---------- | ------- | ------- | -----------
-title | string | - | Title of video
-description | string | - | Video description
-file | binary | - | Binary data of file
+Parameter | Type | Default | Required | Description
+--------- | ------- | ------- | ------- | -----------
+title | string | - | Yes | Title of video
+description | string | - | No | Video description
+file | binary | - | Yes | Binary data of file
+
+
+## Delete a new Video
+
+> Response (Status 200)
+
+```json
+{
+  "status": 200,
+  "message": "Video deleted successfully"
+}
+```
+
+This endpoint lets you delete video from video studio list.
+
+### HTTP Request
+
+<span class="http-req"><span class="delete-method">DELETE</span> /video-studio/:id</span>
+
+### Parameters
+
+Parameter | Type | Default | Required | Description
+--------- | ------- | ------- | ------- | -----------
+id | integer | - | Yes | Video id to be deleted

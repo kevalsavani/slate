@@ -11,7 +11,7 @@
 
 <p align="center"><em>The example above was created with Slate. Check it out at <a href="https://slatedocs.github.io/slate">slatedocs.github.io/slate</a>.</em></p>
 
-bundle exec middleman server & bundle exec middleman build
+bundle exec middleman server & bundle exec middleman build (http://34.231.133.52:2731)
 ------------
 Features
 ------------
